@@ -57,4 +57,4 @@
 ## Презентация результатов
 
 
-[Научный отчет в формате PDF](link-to-report)
+[Презентация](https://github.com/naumovasofiya/MEG-Analysis-of-Neuroplasticity-in-VSS/blob/2b5cffb862f982fdd6b8f9ca7024d29378595af2/Neuroplasticity_VSS/results/figures_and_presentation/Naumova_presentation.pdf)
