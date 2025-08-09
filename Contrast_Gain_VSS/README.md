@@ -71,4 +71,4 @@
 3. Разработка адаптированных опросников для оценки симптомов
 4. Испытания терапевтических подходов, направленных на восстановление баланса В/Т
 
-[Презентация]()
+[Презентация](https://github.com/naumovasofiya/MEG-Analysis-of-Neuroplasticity-in-VSS/blob/796c0b48c364a384ec33c5289841a1fd5b607580/Contrast_Gain_VSS/results/figures_and_presentation/conrast%20gain%20control%20in%20the%20VSS.pdf)
