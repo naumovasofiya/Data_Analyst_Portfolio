@@ -57,4 +57,4 @@
 ## Презентация результатов
 
 
-[Презентация](https://github.com/naumovasofiya/MEG-Analysis-of-Neuroplasticity-in-VSS/blob/2b5cffb862f982fdd6b8f9ca7024d29378595af2/Neuroplasticity_VSS/results/figures_and_presentation/Naumova_presentation.pdf)
+[Презентация]([https://github.com/naumovasofiya/MEG-Analysis-of-Neuroplasticity-in-VSS/blob/2b5cffb862f982fdd6b8f9ca7024d29378595af2/Neuroplasticity_VSS/results/figures_and_presentation/Naumova_presentation.pdf](https://github.com/naumovasofiya/MEG-Analysis-of-Neuroplasticity-in-VSS/blob/42c8d117e38d66abd1b29c734379d527203f788a/Contrast_Gain_VSS/results/figures_and_presentation/conrast%20gain%20control%20in%20the%20VSS.pdf))
