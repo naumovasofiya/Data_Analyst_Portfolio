@@ -1,85 +1,84 @@
-# MEG Processing Pipeline
+# Порядок обработки MEG данных
 
-## 1. Preprocessing (`1_preprocessing_and_ica.py`)
+## 1. Предварительная обработка (`1_preprocessing_and_ica.py`)
 
 ### MaxFilter
-- tSSS (temporal Signal Space Separation)
-- Head movement compensation
-- Bad channel interpolation
+- tSSS (временное разделение сигнального пространства)
+- Компенсация движений головы
+- Интерполяция плохих каналов
 
-### ICA Artifact Removal
-- Bandpass filtering (1-140Hz)
-- Notch filtering (50Hz + harmonics)
-- Automatic detection:
-  - ECG artifacts (max 3 components)
-  - EOG artifacts (max 1 component each)
-- Manual inspection of components
-- Output: Cleaned continuous data
+### Удаление артефактов ICA
+- Фильтрация низких и высоких частот (1-140 Гц)
+- Режекторный фильтр (50 Гц и гармоники)
+- Автоматическое определение:
+  - Артефакты ЭКГ (макс. 3 компонента)
+  - Артефакты ЭОГ (макс. 1 компонент каждого типа)
+- Визуальная проверка компонентов
+- Результат: Очищенные непрерывные данные
 
-### Apply ICA (`2_apply_ica.py`)
-- Manual component rejection
-- Saves cleaned continuous data
+### Применение ICA (`2_apply_ica.py`)
+- Ручное исключение компонентов
+- Сохранение очищенных непрерывных данных
 
-## 2. Epoching (`3_epoching_and_epochs_cleaning.py`)
+## 2. Эпохирование (`3_epoching_and_epochs_cleaning.py`)
 
-### Epoch Creation
-- 2-second epochs (50% overlap)
-- Start aligned to every 7th reversal cycle (~150ms intervals)
+### Создание эпох
+- Эпохи длительностью 2 секунды (50% перекрытие)
+- Начало синхронизировано с каждым 7-м циклом смены (~150 мс интервалы)
 
-### Artifact Rejection
-- Automatic:
-  - Gradiometer threshold: 4000e-13 T/m
-  - High gamma (70-146Hz) power exclusion (2SD)
-- Manual visual inspection
-- Target: ~65 clean epochs per condition
+### Отбраковка артефактов
+- Автоматическая:
+  - Порог для градиометров: 4000e-13 Т/м
+  - Исключение по мощности в высокочастотном гамма-диапазоне (70-146 Гц, 2SD)
+- Визуальная проверка
+- Цель: ~65 чистых эпох на условие
 
-## 3. Spectral Analysis (`4_psd_analysis.py`)
+## 3. Спектральный анализ (`4_psd_analysis.py`)
 
-### Power Spectral Density
-- Welch method (3s windows: 2s data + 0.5s zero-padding)
-- Frequency resolution: 0.33Hz
-- Target frequencies:
-  - Fundamental: 6.666Hz (F1)
-  - Harmonics: 13.333Hz (F2), 20.0Hz (F3), 26.666Hz (F4), 40.0Hz (F6), 53.333Hz (F8)
+### Спектральная плотность мощности
+- Метод Уэлча (окно 3 с: 2 с данных + 0.5 с дополнения нулями)
+- Разрешение по частоте: 0.33 Гц
+- Целевые частоты:
+  - Основная: 6.666 Гц (F1)
+  - Гармоники: 13.333 Гц (F2), 20.0 Гц (F3), 26.666 Гц (F4), 40.0 Гц (F6), 53.333 Гц (F8)
 
-### Appelbaum Metric
-- Signal power: Sum at stimulation harmonics
-- Baseline power: Average of surrounding frequencies (±0.333-0.666Hz)
+### Метрика Appelbaum, 2006
+- Мощность сигнала: Сумма на гармониках стимуляции
+- Фоновая мощность: Среднее на соседних частотах (±0.333-0.666 Гц)
 
-## 4. Contrast Response Modeling (`5_model_fitting.py`)
+## 4. Модель зависимости мощности ответа от изменения контраста (`5_model_fitting.py`)
 
-### Naka-Rushton Function
+### Функция Нака-Раштона
 
 R = Rmax*C²/(v²ˢ + C²ˢ) + b
 
-Where:
-- R = Response power
-- C = Stimulus contrast
-- Rmax = Maximum response
-- v = Semisaturation constant
-- s = Saturation exponent (key parameter)
-- b = Baseline
+Где:
+- R = Мощность ответа
+- C = Контраст стимула
+- Rmax = Максимальный ответ
+- v = Константа полунасыщения
+- s = Показатель насыщения (ключевой параметр)
+- b = Фон
 
-### Fitting
-- Nonlinear minimization (Lmfit)
-- Parameter constraints:
+### Встраивание модели
+- Нелинейная минимизация (Lmfit)
+- Ограничения параметров:
   - v: 0-50
   - s: 0-5
   - b: ≥0
 
-## 5. Statistical Analysis
+## 5. Статистический анализ
 
-### Group Comparisons
-- Primary target: Saturation parameter (s)
-- Tests: Student's t-test or Mann-Whitney
-- Effect size: Cohen's d or r
+### Сравнение групп
+- Основная цель: Параметр насыщения (s)
+- Тесты: t-критерий Стьюдента или Манна-Уитни
+- Размер эффекта: Cohen's d или r
 
-### Correlations
-- Spearman's rank with visual discomfort scores
+### Корреляция параметров
+- Ранговая корреляция Спирмена показателя зрительного дискомфорта и параметра насыщения
 
-## Quality Control
-- ICA component reports (HTML)
-- Topographic maps for each harmonic
-- Model fitting plots with R² values
-- Epoch rejection statistics
-
+## Контроль качества
+- Отчеты по компонентам ICA (HTML)
+- Топографические карты для каждой гармоники
+- Графики встраивания модели с R² значениями
+- Статистика удаления компонент и эпох
