@@ -1,55 +1,55 @@
-# Visual Snow Syndrome (VSS) Steady-State Visual Evoked Fields (SSVEF) Study
+# Исследование устойчивых зрительно-вызванных полей (SSVEF) при синдроме визуального снега (СВС)
 
-## Study Design
+## Дизайн исследования
 
-### Participants
-- **20 VSS patients** (12M, age 27.05±5.32 years)
-- **28 Healthy controls** (17M, age 27.28±4.53 years)
+### Участники
+- **20 пациентов с СВС** (12 мужчин, возраст 27.05±5.32 лет)
+- **28 здоровых контролей** (17 мужчин, возраст 27.28±4.53 лет)
 
-### Diagnostic Criteria
-- Neurologist-confirmed VSS diagnosis
+### Диагностические критерии
+- Подтвержденный неврологом диагноз СВС
 
-### Ethics Approval
-- Moscow State Psychological and Pedagogical University (MSUPE)
+### Этическое одобрение
+- Московский государственный психолого-педагогический университет (МГППУ)
 
-### Inclusion Criteria
-- Normal/corrected-to-normal vision
-- No psychoactive drug use (controls)
+### Критерии включения
+- Нормальное или скорректированное до нормального зрение
+- Отсутствие приема психоактивных веществ (для контрольной группы)
 
-## Stimulus Paradigm
+## Парадигма стимуляции
 
-### Visual Stimuli
-- Black-white horizontal sinusoidal gratings (2 cycles/degree)
+### Визуальные стимулы
+- Черно-белые горизонтальные синусоидальные решетки (2 цикла/градус)
 
-### Conditions
-1. 5% contrast
-2. 10% contrast
-3. 20% contrast
-4. 40% contrast
-5. 80% contrast
+### Условия эксперимента
+1. Контраст 5%
+2. Контраст 10%
+3. Контраст 20%
+4. Контраст 40%
+5. Контраст 80%
 
-### Presentation
-- 10-second blocks per contrast (5 blocks each)
-- 6.666 Hz pattern reversal frequency
-- Inter-block intervals: 10s (fixation cross)
-- Total duration: 16 minutes
+### предъявление стимулов
+- Блоки по 10 секунд для каждого контраста (по 5 блоков)
+- Частота смены паттернов: 6.666 Гц
+- Интервалы между блоками: 10 с (фиксационный крест)
+- Общая продолжительность: 16 минут
 
-## Data Acquisition
+## Регистрация данных
 
-### MEG System
-- Elekta Neuromag VectorView (306 channels)
+### Система MEG
+- Elekta Neuromag VectorView (306 каналов)
 
-### Parameters
-- Sampling: 1000Hz
-- Filters: 0.03-330Hz
+### Параметры записи
+- Частота дискретизации: 1000 Гц
+- Фильтры: 0.03-330 Гц
 
-### Auxiliary
-- ECG (chest electrodes)
-- EOG (vertical/horizontal)
-- EMG (facial muscles)
+### Дополнительные каналы
+- ЭКГ (грудные электроды)
+- Электроокулография (вертикальная/горизонтальная)
+- Электромиография (лицевые мышцы)
 
-### Head Position
-- Indicator coils (4 locations)
+### Позиционирование головы
+- Индикаторные катушки (4 позиции)
 
-### Coregistration
-- 130-150 head surface points + 3 anatomical landmarks
+### Корегистрация
+- 130-150 точек поверхности головы + 3 анатомических ориентира
