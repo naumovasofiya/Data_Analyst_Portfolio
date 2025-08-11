@@ -25,8 +25,6 @@
 ### Epoch Creation
 - 2-second epochs (50% overlap)
 - Start aligned to every 7th reversal cycle (~150ms intervals)
-- Baseline: -1.0 to 0s
-- Post-stim: 0 to 1.2s
 
 ### Artifact Rejection
 - Automatic:
@@ -84,3 +82,4 @@ Where:
 - Topographic maps for each harmonic
 - Model fitting plots with R² values
 - Epoch rejection statistics
+
