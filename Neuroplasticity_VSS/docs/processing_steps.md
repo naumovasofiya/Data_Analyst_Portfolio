@@ -36,7 +36,7 @@
 ## 3. Gamma Band Analysis
 
 ### 3.1 Time-Frequency Decomposition (`4_analyze_gamma_power.py`)
-- **Frequency range**: 5-120Hz (focus on 12-39Hz gamma)
+- **Frequency range**: 5-120Hz (focus on 30-100 Hz gamma)
 - **Method**: Multitaper (time-bandwidth=10.0)
 - **Baseline normalization**: -0.9 to 0s
 - **Top channel selection** based on gamma power
@@ -71,3 +71,4 @@
 - Gamma power dynamics
 - Frequency shifts
 - Condition-specific effects
+
