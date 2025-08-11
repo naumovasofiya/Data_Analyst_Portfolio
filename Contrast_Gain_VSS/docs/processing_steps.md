@@ -51,3 +51,36 @@
 ## 4. Contrast Response Modeling (`5_model_fitting.py`)
 
 ### Naka-Rushton Function
+
+R = Rmax*C²/(v²ˢ + C²ˢ) + b
+
+Where:
+- R = Response power
+- C = Stimulus contrast
+- Rmax = Maximum response
+- v = Semisaturation constant
+- s = Saturation exponent (key parameter)
+- b = Baseline
+
+### Fitting
+- Nonlinear minimization (Lmfit)
+- Parameter constraints:
+  - v: 0-50
+  - s: 0-5
+  - b: ≥0
+
+## 5. Statistical Analysis
+
+### Group Comparisons
+- Primary target: Saturation parameter (s)
+- Tests: Student's t-test or Mann-Whitney
+- Effect size: Cohen's d or r
+
+### Correlations
+- Spearman's rank with visual discomfort scores
+
+## Quality Control
+- ICA component reports (HTML)
+- Topographic maps for each harmonic
+- Model fitting plots with R² values
+- Epoch rejection statistics
