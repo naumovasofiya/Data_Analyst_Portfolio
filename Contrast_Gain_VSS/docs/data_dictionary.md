@@ -3,7 +3,7 @@ Data Dictionary
 model_fitting_results.csv - Naka-Rushton Model Parameters
 | Variable       | Description                                   | Units/Values               |
 |----------------|-----------------------------------------------|----------------------------|
-| subj           | Subject identifier                            | S001-S228                  |
+| subj           | Subject identifier                            |                            |
 | AbN1_semi      | Semi-saturation contrast (c50)                | Unitless (fitted parameter)|
 | AbN1_Rmax      | Maximum response amplitude (Rmax)             | Unitless (fitted parameter)|
 | AbN1_s         | Slope parameter (s)                           | Unitless (fitted parameter)|
@@ -13,7 +13,7 @@ model_fitting_results.csv - Naka-Rushton Model Parameters
 response_power.csv - Contrast Response Data
 | Variable       | Description                                   | Units/Values                       |
 |----------------|-----------------------------------------------|------------------------------------|
-| subj           | Subject identifier                            | S001-S228                          |
+| subj           | Subject identifier                            |                                    |
 | group          | Participant group                             | 1=Control, 2=VSS                   |
 | C5%            | Gamma power at 5% contrast                    | Normalized power (arbitrary units) |
 | C10%           | Gamma power at 10% contrast                   | Normalized power (arbitrary units) |
@@ -25,4 +25,5 @@ response_power.csv - Contrast Response Data
 1. Naka-Rushton function: R(c) = Rmax * (c^n / (c^n + c50^n)) + b
 2. Group codes: 1=Control, 2=VSS (Visual Snow Syndrome)
 3. Power values are normalized 
+
 4. Small parameter values (e.g., 1.85E-10) indicate failed fits
