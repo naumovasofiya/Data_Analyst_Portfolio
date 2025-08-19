@@ -1,5 +1,7 @@
 # Исследование нейропластичности зрительной коры при синдроме визуального снега методом магнитоэнцефалографии
 
+[Презентация результатов](https://github.com/naumovasofiya/MEG-Analysis-of-Neuroplasticity-in-VSS/blob/533bf675c34520fe9e4a6744f912ae1adf3a8ee0/Neuroplasticity_VSS/results/figures_and_presentation/Naumova_presentation.pdf)
+
 ## Цель исследования
 Изучить баланс возбуждения-торможения (E-I balance) и механизмы нейропластичности в зрительной коре у пациентов с синдромом визуального снега (СВС) через анализ динамики гамма-осцилляций (30-100 Гц) при повторяющейся зрительной стимуляции.
 
@@ -96,4 +98,4 @@
 2. Анализ на уровне источников активности в мозге для точной локализации эффектов  
 3. Продолжительные исследования связи GR динамики с прогрессированием симптомов  
 
-[Презентация результатов](https://github.com/naumovasofiya/MEG-Analysis-of-Neuroplasticity-in-VSS/blob/533bf675c34520fe9e4a6744f912ae1adf3a8ee0/Neuroplasticity_VSS/results/figures_and_presentation/Naumova_presentation.pdf)
+
